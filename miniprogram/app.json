@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/code/code",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "CMCC备件管理",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "backgroundColor": "#f8f8f8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "查询",
+        "iconPath": "images/scan.png",
+        "selectedIconPath": "images/scan_selected.png"
+      },
+      {
+        "pagePath": "pages/code/code",
+        "text": "登记",
+        "iconPath": "images/record.png",
+        "selectedIconPath": "images/record.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "历史",
+        "iconPath": "images/history.png",
+        "selectedIconPath": "images/history_selected.png"
+      }
+    ]
+  }
+}
