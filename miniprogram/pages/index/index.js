@@ -24,16 +24,6 @@ Page({
       text: '',
       openid: '',
     },
-    queryResult:{
-      UPDATE_TIME:'',
-      STATUS:'',
-      STORAGE: '',
-      OPERATOR: '',
-      SITE_ID: '',
-      SITE_NAME: '',
-      SPEC_INFO: '',
-      CARD_NAME: '',
-    }
   },
 
 
@@ -56,23 +46,29 @@ Page({
         })
           .get({
             success: res2 => {
-              this.setData({
-                queryResult: {
-                  UPDATE_TIME: res2.data[0].UPDATE_TIME,
-                  STATUS: res2.data[0].STATUS,
-                  STORAGE: res2.data[0].STORAGE,
-                  OPERATOR: res2.data[0].OPERATOR,
-                  SITE_ID: res2.data[0].SITE_ID,
-                  SITE_NAME: res2.data[0].SITE_NAME,
-                  CARD_NAME: res2.data[0].CARD_NAME,
-                  SPEC_INFO: res2.data[0].SPEC_INFO,
-                }
-              })
-              console.log('[数据库] [查询记录] 成功: ', res2)
+              let queryResult=[]
               for (var i = 0; i < res2.data.length; i++) {
-
-              console.log(res2.data[i].UPDATE_TIME)
+                queryResult.push({
+                  UPDATE_TIME: res2.data[i].UPDATE_TIME,
+                  STATUS: res2.data[i].STATUS,
+                  STORAGE: res2.data[i].STORAGE,
+                  OPERATOR: res2.data[i].OPERATOR,
+                  SITE_ID: res2.data[i].SITE_ID,
+                  SITE_NAME: res2.data[i].SITE_NAME,
+                  CARD_NAME: res2.data[i].CARD_NAME,
+                  SPEC_INFO: res2.data[i].SPEC_INFO,
+                })
               }
+              this.setData({
+                queryResult: queryResult
+              })
+              console.log(queryResult)
+              console.log(queryResult[0].UPDATE_TIME)
+              // console.log('[数据库] [查询记录] 成功: ', res2)
+              // for (var i = 0; i < res2.data.length; i++) {
+
+              // console.log(res2.data[i].UPDATE_TIME)
+              // }
             },
             fail: err => {
               wx.showToast({

@@ -12,7 +12,29 @@
           <!-- <view class="weui-form-preview__label">类型</view> -->
           <!-- <view class="weui-form-preview__value">{{ scanResult.type }}</view> -->
         </view>
-        <view wx:if="{{ !scanResult.msg }}" class="weui-form-preview__item">
+          <view class="weui-form-preview__bd" wx:for="{{queryResult}}">
+          <view class="weui-form-preview__label">时间：</view>
+            <view class="weui-form-preview__item">{{item.UPDATE_TIME}}</view>
+            <view class="weui-form-preview__label">状态：</view>
+            <view class="weui-form-preview__item">{{item.STATUS}}</view>
+            <view class="weui-form-preview__label">仓库：</view>
+            <view class="weui-form-preview__item">{{item.STORAGE}}</view>
+            <view class="weui-form-preview__label">操作人：</view>
+            <view class="weui-form-preview__item">{{item.OPERATOR}}</view>
+            <view class="weui-form-preview__label">基站号：</view>
+            <view class="weui-form-preview__item">[{{item.SITE_ID}}]</view>
+            <view class="weui-form-preview__label">基站名：</view>
+            <view class="weui-form-preview__item">[{{item.SITE_NAME}}]</view>
+            <view class="weui-form-preview__label">板件名：</view>
+            <view class="weui-form-preview__item">{{item.CARD_NAME}}</view>
+            <view class="weui-form-preview__label">板件详细信息：</view>
+            <view class="weui-form-preview__item">{{item.SPEC_INFO}}</view>
+            <view class="container">
+              <!-- 分割线 -->
+              <view class="divLine"></view>
+            </view>
+          </view>
+        <!-- <view wx:if="{{ !scanResult.msg }}" class="weui-form-preview__item">
           <view class="weui-form-preview__label">时间</view>
           <view class="weui-form-preview__value weui-form-preview__value_in-bd">
              <text class="code" wx:if="{{queryResult}}">{{queryResult.UPDATE_TIME}}</text>
@@ -45,7 +67,7 @@
           <view class="weui-form-preview__value weui-form-preview__value_in-bd">
             <text selectable="true">{{queryResult.SPEC_INFO}}</text>
           </view>
-        </view>
+        </view> -->
         <view wx:if="{{ !!scanResult.msg }}" class="weui-form-preview__item">
           <view class="weui-form-preview__label">失败原因</view>
           <view class="weui-form-preview__value">{{ scanResult.msg }}</view>
