@@ -1,2 +1,2 @@
-<!--pages/logs/logs.wxml-->
-<text>pages/logs/logs.wxml</text>
+<view class="scanResult text">序列号:024CFA10HB000136</view>
+<view class="scanResult text">基站位置:鹿城移动生成指挥大楼NR_GNODEB</view>

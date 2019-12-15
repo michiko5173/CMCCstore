@@ -1,2 +1,18 @@
-<!--pages/code/code.wxml-->
-<text>pages/code/code.wxml</text>
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class='input-text'>
+      <view class="section__title">序列号：</view>
+  <input type='text' value='{{scanCodeMsg}}' placeholder="请扫描序列号"></input>
+
+  <button bindtap="scanCode" class="weui-btn" type="primary">扫一扫</button>
+</view>
+<view class='input-text'>
+      <view class="section__title">基站位置：</view>
+  <input type='text' value='{{gpsMsg}}' placeholder="请获取基站定位信息"></input>
+
+  <button bindtap="onGPS" class="weui-btn" type="primary">定位基站</button>
+</view>
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+    <button formType="reset">重置</button>
+  </view>
+</form>

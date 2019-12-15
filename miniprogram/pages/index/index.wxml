@@ -2,11 +2,13 @@
   <view class="page__bd">
     <view wx:if="{{ scanResult.isShow }}" class="weui-form-preview">
       <view class="weui-form-preview__hd">
+      
         <view class="weui-form-preview__item">
           <view class="weui-form-preview__label">序列号：{{ scanResult.text }}</view>
           <view class="weui-form-preview__value_in-hd"></view>
         </view>
       </view>
+      
       <view class="weui-form-preview__bd">
         <view class="weui-form-preview__item">
           <!-- <view class="weui-form-preview__label">类型</view> -->
@@ -77,10 +79,10 @@
         <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" bindtap="onCopy">复制</navigator>
       </view>
     </view>
-
-    <view class="page__bd_spacing">
+<view class="page__bd_spacing">
       <button bindtap="onScan" class="weui-btn" type="primary">扫一扫</button>
       <!--<button class="weui-btn" type="primary" plain="true">从相册上传</button>-->
     </view>
+    
   </view>
 </view>

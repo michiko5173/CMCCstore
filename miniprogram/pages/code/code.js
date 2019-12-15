@@ -1,16 +1,42 @@
-// pages/code/code.js
+// pages/logs/logs.js
 Page({
-
+  data: {
+    scanCodeMsg: "",
+    gpsMsg: "",
+  },
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    wx.showToast({
+      title: '成功',
+      duration: 1000
+    })
+  },
+  formReset: function () {
+    console.log('form发生了reset事件')
+  },
   /**
    * 页面的初始数据
    */
-  data: {
 
+  scanCode: function () {
+    var that = this;
+    wx.scanCode({ //扫描API
+      success(res) { //扫描成功
+        console.log(res) //输出回调信息
+        that.setData({
+          scanCodeMsg:res.result,
+        
+        });
+        
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+ 
+
   onLoad: function (options) {
 
   },
@@ -28,10 +54,16 @@ Page({
   onShow: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
+  onGPS() {
+    wx.showToast({
+      title: '定位中',
+      icon: 'loading',
+      duration: 200
+    })
+      this.setData({
+        gpsMsg: '鹿城移动生成指挥大楼NR_GNODEB',
+      })},
+ 
   onHide: function () {
 
   },
@@ -63,4 +95,5 @@ Page({
   onShareAppMessage: function () {
 
   }
+  
 })

@@ -17,15 +17,7 @@ const scanType = {
 }
 
 Page({
-  data: {
-    scanResult: {
-      isShow: false,
-      type: '',
-      text: '',
-      openid: '',
-    },
-  },
-
+ 
 
   onLoad: function(options) {
     if (app.globalData.openid) {
@@ -33,9 +25,6 @@ Page({
         openid: app.globalData.openid
       })
     }
-  },
-  onLoad() {
-
   },
   onScan() {
     wx.scanCode({
@@ -108,6 +97,14 @@ Page({
       }
     })
   },
+  data: {
+    scanResult: {
+      isShow: false,
+      type: '',
+      text: '',
+      openid: '',
+    },
+  },
   onCopy() {
     // 复制到剪贴板
     wx.setClipboardData({
@@ -119,4 +116,11 @@ Page({
       }
     })
   },
+  onUnload: function () {
+    // 页面关闭
+    var pages = getCurrentPages()
+    var prevPage = pages[pages.length - 2]
+    prevPage.onLoad()
+
+  }
 })
