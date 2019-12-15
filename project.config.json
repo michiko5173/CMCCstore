@@ -9,8 +9,10 @@
 		"newFeature": true
 	},
 	"appid": "wxd3b9c6aee9ede379",
-	"projectname": "test",
+	"projectname": "CMCCstore",
 	"libVersion": "2.2.5",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

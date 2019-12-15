@@ -34,5 +34,6 @@
         "selectedIconPath": "images/history_selected.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
