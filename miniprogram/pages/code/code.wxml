@@ -9,18 +9,18 @@
     <view class="section__title">基站位置：</view>
     <input type='text' value='{{gpsMsg}}' placeholder="请获取基站定位信息"></input>
 
-    <button bindtap="onGPS" class="weui-btn" type="primary">定位基站</button>
+    <button bindtap="onGPS" class="weui-btn" type="primary" loading="{{loading}}">定位基站</button>
 </view> <!-- 
     <view class="section section_gap">
     <view class="section__title">开启</view>
     <switch name="switch" />
   </view> -->
     <view class="section">
-    <view class="section__title">备注</view>
+    <view class="section__title">备注：</view>
     <input name="input" placeholder="请填写备注" />
   </view>
   <view class="section section_gap">
-    <view class="section__title">radio</view>
+    <view class="section__title">基站类型：</view>
     <radio-group name="radio-group">
       <label>
         <radio value="radio1" />4G</label>
@@ -29,8 +29,8 @@
     </radio-group>
   </view>
   <view class="btn-area">
-    <button formType="submit">提交</button>
-    <button formType="reset">重置</button>
+    <button formType="submit" type="primary">提交</button>
+    <button formType="reset" type="warn">重置</button>
   </view>
 </form>
 <!--

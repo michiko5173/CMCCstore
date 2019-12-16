@@ -1,4 +1,3 @@
-
 <view class="weui-form-preview__bd">
   <view class="weui-form-preview__item">
   </view>
@@ -22,6 +21,5 @@
     <view class="container">
       <view class="divLine"></view>
     </view>
-  
-</view>
+  </view>
 </view>

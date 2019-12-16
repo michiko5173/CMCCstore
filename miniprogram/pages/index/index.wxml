@@ -46,7 +46,9 @@
       <button bindtap="onScan" class="weui-btn" type="primary">扫一扫</button>
       <!--<button class="weui-btn" type="primary" plain="true">从相册上传</button>-->
     </view>
-    
+          <cover-view class="image-cnt">
+        <cover-image class="cover-image" bindtap="tap1" src="/image/show.png" />
+      </cover-view>
   </view>
 </view>
 <!--
