@@ -1,2 +1,27 @@
-<view class="scanResult text">序列号:024CFA10HB000136</view>
-<view class="scanResult text">基站位置:鹿城移动生成指挥大楼NR_GNODEB</view>
+
+<view class="weui-form-preview__bd">
+  <view class="weui-form-preview__item">
+  </view>
+  <view class="weui-form-preview__bd" wx:for="{{queryResult}}">
+    <view class="weui-form-preview__label">时间：</view>
+    <view class="weui-form-preview__item">{{item.UPDATE_TIME}}</view>
+    <view class="weui-form-preview__label">状态：</view>
+    <view class="weui-form-preview__item">{{item.STATUS}}</view>
+    <view class="weui-form-preview__label">仓库：</view>
+    <view class="weui-form-preview__item">{{item.STORAGE}}</view>
+    <view class="weui-form-preview__label">操作人：</view>
+    <view class="weui-form-preview__item">{{item.OPERATOR}}</view>
+    <view class="weui-form-preview__label">基站号：</view>
+    <view class="weui-form-preview__item">[{{item.SITE_ID}}]</view>
+    <view class="weui-form-preview__label">基站名：</view>
+    <view class="weui-form-preview__item">[{{item.SITE_NAME}}]</view>
+    <view class="weui-form-preview__label">板件名：</view>
+    <view class="weui-form-preview__item">{{item.CARD_NAME}}</view>
+    <view class="weui-form-preview__label">板件详细信息：</view>
+    <view class="weui-form-preview__item">{{item.SPEC_INFO}}</view>
+    <view class="container">
+      <view class="divLine"></view>
+    </view>
+  
+</view>
+</view>

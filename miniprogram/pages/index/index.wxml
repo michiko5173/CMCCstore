@@ -11,8 +11,6 @@
       
       <view class="weui-form-preview__bd">
         <view class="weui-form-preview__item">
-          <!-- <view class="weui-form-preview__label">类型</view> -->
-          <!-- <view class="weui-form-preview__value">{{ scanResult.type }}</view> -->
         </view>
           <view class="weui-form-preview__bd" wx:for="{{queryResult}}">
           <view class="weui-form-preview__label">时间：</view>
@@ -32,44 +30,9 @@
             <view class="weui-form-preview__label">板件详细信息：</view>
             <view class="weui-form-preview__item">{{item.SPEC_INFO}}</view>
             <view class="container">
-              <!-- 分割线 -->
               <view class="divLine"></view>
             </view>
           </view>
-        <!-- <view wx:if="{{ !scanResult.msg }}" class="weui-form-preview__item">
-          <view class="weui-form-preview__label">时间</view>
-          <view class="weui-form-preview__value weui-form-preview__value_in-bd">
-             <text class="code" wx:if="{{queryResult}}">{{queryResult.UPDATE_TIME}}</text>
-          </view>
-          <view class="weui-form-preview__label">操作</view>
-          <view class="weui-form-preview__value weui-form-preview__value_in-bd">
-            <text selectable="true">{{queryResult.STATUS}}</text>
-          </view>
-          <view class="weui-form-preview__label">仓库</view>
-          <view class="weui-form-preview__value weui-form-preview__value_in-bd">
-            <text selectable="true">{{queryResult.STORAGE}}</text>
-          </view>
-          <view class="weui-form-preview__label">经手人</view>
-          <view class="weui-form-preview__value weui-form-preview__value_in-bd">
-            <text selectable="true">{{queryResult.OPERATOR}}</text>
-          </view>
-          <view class="weui-form-preview__label">基站号</view>
-          <view class="weui-form-preview__value weui-form-preview__value_in-bd">
-            <text selectable="true">|{{queryResult.SITE_ID}}</text>
-          </view>
-                    <view class="weui-form-preview__label">基站名</view>
-          <view class="weui-form-preview__value weui-form-preview__value_in-bd">
-            <text selectable="true">|{{queryResult.SITE_NAME}}</text>
-          </view>
-                    <view class="weui-form-preview__label">板件类型</view>
-          <view class="weui-form-preview__value weui-form-preview__value_in-bd">
-            <text selectable="true">{{queryResult.CARD_NAME}}</text>
-          </view>
-                    <view class="weui-form-preview__label">详细信息</view>
-          <view class="weui-form-preview__value weui-form-preview__value_in-bd">
-            <text selectable="true">{{queryResult.SPEC_INFO}}</text>
-          </view>
-        </view> -->
         <view wx:if="{{ !!scanResult.msg }}" class="weui-form-preview__item">
           <view class="weui-form-preview__label">失败原因</view>
           <view class="weui-form-preview__value">{{ scanResult.msg }}</view>
