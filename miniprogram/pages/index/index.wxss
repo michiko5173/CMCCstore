@@ -10,10 +10,9 @@
   display: inline-block;
 }
 .image-cnt {
-  display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .canvas {
   width: 304px;
@@ -36,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .cover-image {
@@ -45,7 +44,7 @@
 }
 
 .page__bd_spacing {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .weui-form-preview__value_in-bd {

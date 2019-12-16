@@ -42,12 +42,15 @@
         <navigator url="" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" bindtap="onCopy">复制</navigator>
       </view>
     </view>
+              <cover-view class="image-cnt">
+        <cover-image style="width: 100px; height: 100px; " class="cover-image" bindtap="tap1" src="/images/loading.gif" mode="scaleToFill"/>
+      </cover-view>
 <view class="page__bd_spacing">
       <button bindtap="onScan" class="weui-btn" type="primary">扫一扫</button>
       <!--<button class="weui-btn" type="primary" plain="true">从相册上传</button>-->
     </view>
           <cover-view class="image-cnt">
-        <cover-image class="cover-image" bindtap="tap1" src="/image/show.png" />
+        <cover-image style="width: 200px; height: 200px; " class="cover-image" bindtap="tap1" src="/images/show.png" mode="scaleToFill"/>
       </cover-view>
   </view>
 </view>
