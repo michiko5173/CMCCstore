@@ -12,11 +12,13 @@
 }
 .section{
     clear: both;
-    width:90%;
+
     margin: 2rem auto;
+ 
 }
 .input-text{
     border: 1px solid #ddd;
+    padding: 5px;
 }
 .button{
     border: 1px solid #1aad19;

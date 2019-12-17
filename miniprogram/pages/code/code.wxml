@@ -22,15 +22,18 @@
   <view class="section section_gap">
     <view class="section__title">基站类型：</view>
     <radio-group name="radio-group">
+       <label>
+        <radio value="radio2" />2G</label>
       <label>
         <radio value="radio1" />4G</label>
       <label>
         <radio value="radio2" />5G</label>
+        
     </radio-group>
   </view>
   <view class="btn-area">
     <button formType="submit" type="primary">提交</button>
-    <button formType="reset" type="warn">重置</button>
+    <button formType="reset" type="warn" >重置</button>
   </view>
 </form>
 <!--
